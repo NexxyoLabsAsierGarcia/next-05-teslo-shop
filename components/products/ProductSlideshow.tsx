@@ -4,31 +4,31 @@ import { Slide } from "react-slideshow-image";
 import styles from "./ProductSlideshow.module.css";
 
 interface Props {
-    images: string[];
+  images: string[];
 }
 
 export const ProductSlideshow: FC<Props> = ({ images }) => {
   return (
     <Slide
-        easing="ease"
-        duration={ 7000 }
-        indicators
+      easing="ease"
+      duration={7000}
+      indicators
     >
-        {
-            images.map( image => {
-                const url = `/products/${ image }`
-                return (
-                    <div className={styles['each-slide']} key={image}>
-                        <div style={{
-                            backgroundImage: `url(${url})`,
-                            backgroundSize: 'cover'
-                        }}>
+      {
+        images.map(image => {
+          const url = `/products/${image}`
+          return (
+            <div className={styles['each-slide']} key={image}>
+              <div style={{
+                backgroundImage: `url(${url})`,
+                backgroundSize: 'cover'
+              }}>
 
-                        </div>
-                    </div>
-                )
-            })
-        }
+              </div>
+            </div>
+          )
+        })
+      }
     </Slide>
   )
 }

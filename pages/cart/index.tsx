@@ -5,31 +5,31 @@ import { Box, Button, Card, CardContent, Divider, Grid, Typography } from "@mui/
 const CartPage = () => {
   return (
     <ShopLayout title="Cart" pageDescription="Teslo shopping cart">
-        <>
-            <Typography variant="h1" component="h1">Cart</Typography>
-            <Grid container>
-                <Grid item xs={12} sm={7}>
-                    <CartList editable />
-                </Grid>
-                <Grid item xs={12} sm={5}>
-                    <Card className="summary-card">
-                        <CardContent>
-                            <Typography variant="h2">Orden</Typography>
-                            <Divider sx={{ my:1 }} />
+      <>
+        <Typography variant="h1" component="h1">Cart</Typography>
+        <Grid container>
+          <Grid item xs={12} sm={7}>
+            <CartList editable />
+          </Grid>
+          <Grid item xs={12} sm={5}>
+            <Card className="summary-card">
+              <CardContent>
+                <Typography variant="h2">Orden</Typography>
+                <Divider sx={{ my: 1 }} />
 
-                            <OrderSummary />
+                <OrderSummary />
 
-                            <Box sx={{ mt: 3 }}>
-                                <Button color="secondary" className="circular-btn" fullWidth>Checkout</Button>
-                            </Box>
+                <Box sx={{ mt: 3 }}>
+                  <Button color="secondary" className="circular-btn" fullWidth>Checkout</Button>
+                </Box>
 
-                        </CardContent>
-                    </Card>
-                </Grid>
-            </Grid>
-        </>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </>
     </ShopLayout>
   )
 }
 
-export default CartPage
+export default CartPage;

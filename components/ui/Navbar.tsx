@@ -6,52 +6,52 @@ import { FC } from 'react';
 export const Navbar = () => {
   return (
     <AppBar>
-        <Toolbar>
-            <NextLink href="/" passHref legacyBehavior>
-                <Link display="flex" alignItems="center">
-                    <Typography variant='h6'>Teslo |</Typography>
-                    <Typography sx={{ ml: 0.5 }}>Shop</Typography>
-                </Link>
-            </NextLink>
+      <Toolbar>
+        <NextLink href="/" passHref legacyBehavior>
+          <Link display="flex" alignItems="center">
+            <Typography variant='h6'>Teslo |</Typography>
+            <Typography sx={{ ml: 0.5 }}>Shop</Typography>
+          </Link>
+        </NextLink>
 
-            <Box flex={ 1 }></Box>
+        <Box flex={1}></Box>
 
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                <NextLink href="/category/men" passHref legacyBehavior>
-                    <Link>
-                        <Button>Men</Button>
-                    </Link>
-                </NextLink>
-                <NextLink href="/category/women" passHref legacyBehavior>
-                    <Link>
-                        <Button>Women</Button>
-                    </Link>
-                </NextLink>
-                <NextLink href="/category/kids" passHref legacyBehavior>
-                    <Link>
-                        <Button>Kids</Button>
-                    </Link>
-                </NextLink>
-            </Box>
+        <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <NextLink href="/category/men" passHref legacyBehavior>
+            <Link>
+              <Button>Men</Button>
+            </Link>
+          </NextLink>
+          <NextLink href="/category/women" passHref legacyBehavior>
+            <Link>
+              <Button>Women</Button>
+            </Link>
+          </NextLink>
+          <NextLink href="/category/kids" passHref legacyBehavior>
+            <Link>
+              <Button>Kids</Button>
+            </Link>
+          </NextLink>
+        </Box>
 
-            <Box flex={ 1 }></Box>
+        <Box flex={1}></Box>
 
+        <IconButton>
+          <SearchOutlined />
+        </IconButton>
+
+        <NextLink href="/cart" passHref legacyBehavior>
+          <Link>
             <IconButton>
-                <SearchOutlined />
+              <Badge badgeContent={2} color='secondary'>
+                <ShoppingCartOutlined />
+              </Badge>
             </IconButton>
+          </Link>
+        </NextLink>
 
-            <NextLink href="/cart" passHref legacyBehavior>
-                <Link>
-                    <IconButton>
-                        <Badge badgeContent={ 2 } color='secondary'>
-                            <ShoppingCartOutlined />
-                        </Badge>
-                    </IconButton>
-                </Link>
-            </NextLink>
-
-            <Button>Menu</Button>
-        </Toolbar>
+        <Button>Menu</Button>
+      </Toolbar>
     </AppBar>
   )
 }
